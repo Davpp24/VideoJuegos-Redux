@@ -81,7 +81,14 @@ const GamesPage = () => {
           onChange={(e) => setSearchTerm(e.target.value)}
           placeholder="Search for games..."
         />
-        <button type="submit" style={buttonStyle} onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#e84148"} onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#ff4757"}>Search</button>
+        <button
+          type="submit"
+          style={buttonStyle}
+          onMouseEnter={(e) => e.currentTarget.style.backgroundColor = "#e84148"}
+          onMouseLeave={(e) => e.currentTarget.style.backgroundColor = "#ff4757"}
+        >
+          Search
+        </button>
       </form>
       <div style={gridStyle}>
         {games.map((game) => (
