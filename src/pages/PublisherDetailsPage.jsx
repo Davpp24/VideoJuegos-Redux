@@ -25,9 +25,10 @@ const descriptionStyle = {
   fontSize: "1.2rem",
   marginBottom: "25px",
   lineHeight: "1.6",
-  backgroundColor: "rgba(255, 255, 255, 0.1)",
+  backgroundColor: "rgba(255, 255, 255, 0.2)",
   padding: "15px",
-  borderRadius: "10px"
+  borderRadius: "10px",
+  color: "#000000"
 };
 
 const gridStyle = {
@@ -72,7 +73,7 @@ const PublisherDetailsPage = () => {
       {publisher.image_background && (
         <img src={publisher.image_background || "/placeholder.svg"} alt={publisher.name} style={imageStyle} />
       )}
-      <p style={descriptionStyle}>{publisher.description_raw || "No description available."}</p>
+      <p style={descriptionStyle}>{publisher.description || "No description available."}</p>
       <h2 style={{ marginBottom: "20px", color: "#ff4757" }}>Games by {publisher.name}</h2>
       <div style={gridStyle}>
         {games.map((game) => (
